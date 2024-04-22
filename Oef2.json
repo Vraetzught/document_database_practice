@@ -1,0 +1,57 @@
+{
+    "$jsonSchema": {
+        "description": "Dit document beschrijft een film",
+        "bsonType": "object",
+        "required": [
+            "title",
+            "releaseDate",
+            "inhoud",
+            "rating",
+            "productiehuis",
+            "acteurs",
+            "filmcrew"
+        ],
+        "properties": {
+            "title": {
+                "bsonType": "string"
+            },
+            "releaseDate": {
+                "bsonType": "date"
+            },
+            "inhoud": {
+                "bsonType": "string"
+            },
+            "rating": {
+                "bsonType": "int"
+            },
+            "productiehuis": {
+                "bsonType": "string"
+            },
+            "acteurs": {
+                "bsonType": "array",
+                "items": {
+                    "bsonType": "object",
+                    "required": [
+                        "naam",
+                        "voornaam",
+                        "rol"
+                    ],
+                    "properties": {
+                        "naam": {
+                            "bsonType": "string"
+                        },
+                        "voornaam": {
+                            "bsonType": "string"
+                        },
+                        "rol": {
+                            "bsonType": "string"
+                        }
+                    }
+                }
+            },
+            "filmcrew": {
+                "bsonType": "object"
+            }
+        }
+    }
+}
