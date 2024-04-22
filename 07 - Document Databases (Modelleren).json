@@ -1,0 +1,38 @@
+{
+  "description": "Dit document beschrijft …",
+  "bsonType": "object",
+  "required": ["naam", "voornaam", "contactGegevens", "vakken", "papers"],
+  "properties": {
+    "naam": {
+      "bsonType": "string",
+      "description": "De achternaam van de …"
+    },
+    "voornaam": {
+      "bsonType": "string",
+      "description": "De voornaam van de …"
+    },
+    "contactGegevens": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "object",
+        "required": ["type", "contact"],
+        "properties": {
+          "type": { "bsonType": "string" },
+          "contact": { "bsonType": "string" }
+        }
+      }
+    },
+    "vakken": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "obJectId"
+      }
+    },
+    "papers": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "objectId"
+      }
+    }
+  }
+}
