@@ -1,0 +1,74 @@
+{
+    "$jsonSchema": {
+        "description": "Dit document beschrijft een product",
+        "bsonType": "object",
+        "required": [
+            "type",
+            "naam",
+            "beschrijving",
+            "productnummer",
+            "shipping",
+            "prijs",
+            "details"
+        ],
+        "properties": {
+            "type": {
+                "bsonType": "string",
+                "description": "Type van het product"
+            },
+            "naam": {
+                "bsonType": "string",
+                "description": "Naam van het product"
+            },
+            "beschrijving": {
+                "bsonType": "string",
+                "description": "Beschrijving van het product"
+            },
+            "productnummer": {
+                "bsonType": "string",
+                "description": "Nummer van het product"
+            },
+            "shipping": {
+                "bsonType": "object",
+                "required": [
+                    "gewicht",
+                    "lengte",
+                    "breedte",
+                    "hoogte"
+                ],
+                "properties": {
+                    "gewicht": {
+                        "bsonType": "int"
+                    },
+                    "lengte": {
+                        "bsonType": "int"
+                    },
+                    "breedte": {
+                        "bsonType": "int"
+                    },
+                    "hoogte": {
+                        "bsonType": "int"
+                    }
+                }
+            },
+            "prijs": {
+                "bsonType": "object",
+                "required": [
+                    "listing",
+                    "retail"
+                ],
+                "properties": {
+                    "listing": {
+                        "bsonType": "double"
+                    },
+                    "retail": {
+                        "bsonType": "double"
+                    }
+                }
+            },
+            "details": {
+                "bsonType": "object"
+            }
+        }
+    }
+}
